@@ -35,4 +35,4 @@ content-type: application/json
 }
 
 ### DELETE location
-DELETE http://localhost:5000/travel/66808dc03d993e79b724696e
+DELETE http://localhost:5000/travel/6684776c234f6c12e59d7005

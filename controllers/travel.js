@@ -5,27 +5,23 @@ const getAll = async (req, res) => {
     const result = await mongodb.getDb().db().collection('locations').find();
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(locations);
+        res.status(200).json(lists);
     });
 };
 
 const getById = (req, res) => {
     //#swagger.tags=['Travel']
-    if (!ObjectId.isValid(req.params.id)) {
-        res.status(400).json('Must use a valid location id.');
-    }
     const locationId = new ObjectId(req.params.id);
     const result = mongodb.getDb().db().collection('locations').find({ _id: locationId });
-    result.toArray((err, result) => {
-        if (err) {
-            res.status(400).json({ message: err });
-        }
+    result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(locations[0]);
+        res.status(200).json(lists[0]);
     });
 };
 
 const addLocation = async (req, res) => {
+    console.log('In the addLocation method');
+
     //#swagger.tags=['Travel']
     const location = {
         place: req.body.place,
