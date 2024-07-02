@@ -6,8 +6,8 @@ const saveLocation = (req, res, next) => {
     country: 'required|string',
     description: 'required|string',
     famous_landmark: 'required|string',
-    average_temperature_celsius: 'required|number',
-    currenc: 'required|string',
+    average_temperature_celsius: 'required|numeric',
+    currency: 'required|string',
     language: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {

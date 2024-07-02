@@ -1,10 +1,14 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res) => {
+const getAll = (req, res) => {
     //#swagger.tags=['Travel']
-    const result = await mongodb.getDb().db().collection('locations').find();
-    result.toArray((err, lists) => {
+    mongodb
+    .getDb()
+    .db()
+    .collection('locations')
+    .find()
+    .toArray((err, lists) => {
         if(err) {
             res.status(400).json({ message: err });
         }

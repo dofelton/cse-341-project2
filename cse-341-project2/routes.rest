@@ -25,13 +25,8 @@ PUT http://localhost:5000/travel/66808e973d993e79b724696f HTTP/1.1
 content-type: application/json
 
 {
-    "place": "New York",
-    "country": "USA",
-    "description": "The big apple with lots of people.",
-    "famous_landmark": "Time Square",
-    "average_temperature_celsius": 12,
-    "currency": "Dollar",
-    "language": "English"
+    
+    
 }
 
 ### DELETE location
