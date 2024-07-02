@@ -1,0 +1,38 @@
+// local host: 5000
+
+### get all
+GET http://localhost:5000/travel
+
+### get individual
+GET http://localhost:5000/travel/66808e973d993e79b724696f
+
+### create location
+POST http://localhost:5000/travel HTTP/1.1
+content-type: application/json
+
+{
+    "place": "Dallas",
+    "country": "Texas",
+    "description": "The Big D! Known for it's beef and it's football. Y'all come back now.",
+    "famous_landmark": "AT&T Stadium",
+    "average_temperature_celsius": 18,
+    "currency": "Dollar",
+    "language": "Texan"
+}
+
+### PUT update location
+PUT http://localhost:5000/travel/66808e973d993e79b724696f HTTP/1.1
+content-type: application/json
+
+{
+    "place": "New York",
+    "country": "USA",
+    "description": "The big apple with lots of people.",
+    "famous_landmark": "Time Square",
+    "average_temperature_celsius": 12,
+    "currency": "Dollar",
+    "language": "English"
+}
+
+### DELETE location
+DELETE http://localhost:5000/travel/66808dc03d993e79b724696e
