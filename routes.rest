@@ -21,7 +21,7 @@ content-type: application/json
 }
 
 ### PUT update location
-PUT http://localhost:5000/travel/66808e973d993e79b724696f HTTP/1.1
+PUT http://localhost:5000/travel/66849892b435d8c62faab10b HTTP/1.1
 content-type: application/json
 
 {
@@ -35,4 +35,4 @@ content-type: application/json
 }
 
 ### DELETE location
-DELETE http://localhost:5000/travel/6684776c234f6c12e59d7005
+DELETE http://localhost:5000/travel/66849892b435d8c62faab10b
