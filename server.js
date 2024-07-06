@@ -29,7 +29,7 @@ app.use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
 app.use(cors({ origin: '*'}))
 app.use('/', require('./routes'));
 
-passport.use(GitHubStrategy({
+passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     callbackURL: process.env.CALLBACK_URL
