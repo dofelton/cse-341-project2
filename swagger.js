@@ -5,7 +5,7 @@ const doc = {
         title: 'Travel Locations API',
         description: 'Api showing various locations to travel to.'
     },
-    host: 'localhost:5000',
+    host: 'https://cse-341-project2-lvub.onrender.com',
     schemes: ['http', 'https']
 };
 
